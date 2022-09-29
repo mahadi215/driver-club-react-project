@@ -2,7 +2,20 @@ import React from 'react';
 import './profile.css'
 
 const Profile = (props) => {
-    console.log(props);
+    // console.log(props.ride);
+    const breakHandle = (e) => {
+        console.log(e);
+        
+
+    }
+
+    const {ride} = props;
+    let totalTime = 0;
+    for(const rTime of ride){
+        
+        totalTime = totalTime + rTime.time;
+        console.log(totalTime);
+    }
     return (
         <div>
             <div className="profile-box">
@@ -13,16 +26,17 @@ const Profile = (props) => {
                 <div className="break">
                     <h4>Add a break</h4>
                     <div>
-                        <span><span id='b-time'>10</span>m</span>
-                        <span><span id='b-time'>20</span>m</span>
-                        <span><span id='b-time'>30</span>m</span>
+                       <span><button onClick={() => breakHandle(e)}>20</button>min</span>
+                       <span><button onClick={() => breakHandle(e)}>15</button>min</span>
+                       <span><button onClick={() => breakHandle(e)}>30</button>min</span>
+                       <span><button onClick={() => breakHandle(e)}>20</button>min</span>
                     </div>
                 </div>
             
             <div className="ride-detils">
                 <h4>Ride details</h4>
                 <div>
-                    <p>Ride Time</p>
+                    <p>Ride Time: {totalTime}</p>
                 </div>
                 <div>
                     <p>Break Time</p>

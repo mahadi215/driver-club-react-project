@@ -5,7 +5,7 @@ import './Home.css'
 
 const Home = () => {
     const [rides, setRides] = useState([]);
-    const [time, setTimeS] = useState([]);
+    const [time, setTimes] = useState([]);
 
     useEffect(() => {
         fetch('data.json')
@@ -13,9 +13,17 @@ const Home = () => {
         .then(data => setRides(data))
     },[])
 
-    const addToList =(time) => {
-        console.log(time);
+    // let previusTime = 0;
+    let arr;
+    const addToList =(ride) => {
+        // console.log(ride);
         
+        
+       arr = [...time, ride]
+    
+        setTimes(arr);
+
+
     }
     return (
         <div className='home-container'>
@@ -29,7 +37,7 @@ const Home = () => {
                 </div>
             </div>
             <div className="rigt-side">
-                <Profile></Profile>
+                <Profile ride={time}min></Profile>
             </div>
         </div>
     );

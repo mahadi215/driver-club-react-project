@@ -7,6 +7,10 @@
  margin: 0px 10px;
  
 }
+.name{
+    margin-bottom: 0px;
+    padding: 0px;
+}
 .break{
     background-color: steelblue;
     margin: 5px;
@@ -14,9 +18,15 @@
     padding: 10px;
     border-radius: 5px;
 }
+.break div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .ride-detils{
     background-color: steelblue;
     margin: 5px;
+    margin-bottom: 15px;
     padding: 5px ;
     border-radius: 5px;
 }

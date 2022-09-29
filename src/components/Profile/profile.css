@@ -1,0 +1,32 @@
+
+.profile-box{
+ background-color: #034b86;
+ border-radius: 5px;
+ padding: 10px;
+ color: white;
+ margin: 0px 10px;
+ 
+}
+.break{
+    background-color: steelblue;
+    margin: 5px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.ride-detils{
+    background-color: steelblue;
+    margin: 5px;
+    padding: 5px ;
+    border-radius: 5px;
+}
+.profile-box button{
+    padding: 10px 15px;
+    background-color: white;
+    color: #034b86;
+    font-weight: bolder;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    width: 80%;
+}

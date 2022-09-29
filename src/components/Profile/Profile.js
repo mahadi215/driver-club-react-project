@@ -2,7 +2,7 @@ import React from 'react';
 import './profile.css'
 
 const Profile = (props) => {
-    console.log(props.ride);
+    console.log(props);
     return (
         <div>
             <div className="profile-box">

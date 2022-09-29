@@ -8,8 +8,8 @@ const Ride = (props) => {
             <img className='card-img' src={img} alt="" />
             <h3>Distance: {distance}</h3>
             <p>Passenger {passenger}</p>
-            <p>Time Required {time}</p>
-            <button  > Add To List</button>
+            <p>Time Required {time}min</p>
+            <button onClick={() => props.addToList(time)} > Add To List</button>
         </div>
     );
 };

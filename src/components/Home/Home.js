@@ -5,25 +5,31 @@ import './Home.css'
 
 const Home = () => {
     const [rides, setRides] = useState([]);
+    const [time, setTimeS] = useState([]);
 
     useEffect(() => {
         fetch('data.json')
         .then(res => res.json())
         .then(data => setRides(data))
     },[])
-console.log();
+
+    const addToList =(time) => {
+        console.log(time);
+        
+    }
     return (
         <div className='home-container'>
             <div className="left-side">
                 <h4>Select Today's Ride</h4>
                 <div className="rides-container">
                     {
-                        rides.map(ride => <Ride key={ride.id} ride={ride}></Ride>)
+                        rides.map(ride => <Ride key={ride.id} ride={ride}
+                        addToList={addToList}></Ride>)
                     }
                 </div>
             </div>
             <div className="rigt-side">
-                <Profile ride={rides}></Profile>
+                <Profile></Profile>
             </div>
         </div>
     );
